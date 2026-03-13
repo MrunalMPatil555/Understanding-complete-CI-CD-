@@ -12,7 +12,7 @@ pipeline {
 	stages {
 		stage('Git Checkout') {
 			steps{
-				git branch: 'main', url: ''	
+				git branch: ‘main’, credentialsID: ‘credential_name’, url: ‘https://github.com/complete_url_of_your_git_repository’	
 			}
 		}
 		stage('Compile') {
